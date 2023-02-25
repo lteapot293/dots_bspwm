@@ -4,28 +4,34 @@ super + Return
 super + shift + {q,r}
     bspc {quit,wm -r}
 
+super + f
+	firefox
+
 super + e
     nemo
+    
+super + g
+    geany
 
 super + q 
 	bspc node -{c}
 
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + shift + {t,s,f}
+	bspc node -t {tiled,floating,fullscreen}
 
 super + {_,shift + }{Left,Down,Up,Right}
     bspc node -{f,s} {west,south,north,east}
 
-super + shift + {h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+super + {_,shift + }{1-5,0}
+  bspc {desktop -f, node -d} '^{1-5,10}' --follow
 
 super + ctrl + {Left,Down,Up,Right}
-	bspc node -p {west,south,north,east}
+	bspc node -z {right -80 0,top 0 80,bottom 0 -80,left 80 0}
 
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+ctrl + {Left,Down,Up,Right}
+	bspc node -z {left -80 0,bottom 0 80,top 0 -80,right 80 0}
 
-super + r
+super + d
     rofi -show drun -modi drun -show-icons
 
 super + l
@@ -40,20 +46,21 @@ super + m
 super + p
     rofi -show power-menu -modi power-menu:rofi-power-menu
 
-super + S
+super + Print
     flameshot gui
 
 XF86AudioRaiseVolume
-	amixer set Master 1%+
+	amixer set Master 5%+
 
 XF86AudioLowerVolume
-	amixer set Master 1%-
+	amixer set Master 5%-
 
 XF86AudioMute
     amixer set Master toggle
 
 XF86MonBrightnessUp 
-    brightnessctl set +1%
+    brightnessctl set +5%
 
 XF86MonBrightnessDown 
-    brightnessctl set 1%-
+    brightnessctl set 5%-
+    
