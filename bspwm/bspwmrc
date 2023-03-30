@@ -1,6 +1,7 @@
 #! /bin/sh 
 sxhkd &
-picom &
+xset r rate 200 30 &
+picom -b &
 setxkbmap -option grp:lalt_toggle us,ru
 xsetroot -cursor_name Bibata-Modern-Classic &
 xsetroot -cursor_name left_ptr &
