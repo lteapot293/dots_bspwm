@@ -9,7 +9,7 @@ xsetroot -cursor_name left_ptr &
 
 gsettings set org.gnome.desktop.interface gtk-theme Nordic &
 gsettings set org.gnome.desktop.interface cursor-size 15 &
-gsettings set org.gnome.desktop.interface font-name "Fira code medium 11" &
+gsettings set org.gnome.desktop.interface font-name "Fira Code Nerd Font 11" &
 
 feh --bg-fil /home/teapot293/wallp/1.png &
 polybar &
