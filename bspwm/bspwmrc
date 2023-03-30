@@ -1,6 +1,7 @@
 #! /bin/sh 
 sxhkd &
 xset r rate 200 30 &
+dunst &
 picom -b &
 setxkbmap -option grp:lalt_toggle us,ru
 xsetroot -cursor_name Bibata-Modern-Classic &
