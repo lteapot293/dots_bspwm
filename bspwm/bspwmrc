@@ -6,7 +6,11 @@ picom -b &
 setxkbmap -option grp:lalt_toggle us,ru
 xsetroot -cursor_name Bibata-Modern-Classic &
 xsetroot -cursor_name left_ptr &
-setxkbmap -option ctrl:nocaps &
+
+gsettings set org.gnome.desktop.interface gtk-theme Nordic &
+gsettings set org.gnome.desktop.interface cursor-size 15 &
+gsettings set org.gnome.desktop.interface font-name "Fira code medium 11" &
+
 feh --bg-fil /home/teapot293/wallp/1.png &
 polybar &
 wmname LG3D &
